@@ -58,6 +58,7 @@ header{
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    min-width: 320px;
     height: 80px;
     padding: 1em 3em;
     text-align: center;
@@ -128,7 +129,7 @@ a:active .nav-icon {
 }
 
 header .header__nav--bar{
-    min-width: 320px;
+    min-width: 200px;
     width: 500px;
     height: 48px;
     padding: 1.5em;
@@ -155,3 +156,51 @@ header .header__nav--bar{
     border: 4px solid #55b5e2;
 }
 
+main{
+    width: 100%;
+}
+
+.container{
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fill, 240px);
+    gap: 1em;
+    justify-content: center;
+}
+
+.item{
+    display: flex;
+    width: 100%;
+    padding: 1em;
+}
+
+.level-1{
+    grid-row-end: 3 span;
+}
+
+.level-2{
+    grid-row-end: 2 span;
+}
+
+.level-3{
+    grid-row-end: 1 span;
+}
+
+.item img{
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 700px){
+    header .header__nav--bar{
+        display: none;
+    }
+
+}
+@media screen and (max-width: 400px){
+    header .header__nav-left{
+        display: none;
+    }
+
+}
